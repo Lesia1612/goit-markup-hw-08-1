@@ -1,0 +1,52 @@
+.page-footer {
+  background-color: $footer-background-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.page-footer--content-position {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    @media screen and (max-width: 1199px) {
+      justify-content: space-around;
+    }
+  }
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+}
+
+.join-us {
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+
+.footer-widget:last-child {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 100%;
+  }
+}
+
+.footer-widget {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 50%;
+  }
+}
+
+.footer-widget {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+}
+
+.footer-widget:not(:last-child) {
+  @media screen and (min-width: 1200px) {
+    width: calc((50% - 45px) / 2);
+    margin-right: 30px;
+  }
+}

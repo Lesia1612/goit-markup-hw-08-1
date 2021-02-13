@@ -1,0 +1,58 @@
+/* Social Network List */
+
+.social-networks-list {
+  display: flex;
+  @media screen and (max-width: 1199px) {
+    justify-content: center;
+  }
+
+  padding-right: 32px;
+  padding-left: 32px;
+  padding-bottom: 30px;
+  margin-top: 16px;
+
+  &--footer {
+    padding: 0;
+  }
+}
+
+.social-networks-list__title {
+  @extend %list-title;
+}
+
+.social-networks-list__item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.social-networks-list__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  fill: $logo-border;
+
+  transition-property: fill, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    fill: white;
+    cursor: pointer;
+  }
+
+  &--footer {
+    background-color: rgba(255, 255, 255, 0.1);
+    fill: $white-text-color;
+  }
+}
+
+.social-networks-list__icon {
+  width: 20px;
+  height: 20px;
+}

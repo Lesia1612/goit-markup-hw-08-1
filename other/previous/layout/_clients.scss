@@ -1,0 +1,44 @@
+/* Clients Section */
+
+.clients-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.clients-section__title {
+  @extend %section-title;
+}
+
+.clients-list {
+  display: flex;
+}
+
+.clients-list__item {
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.clients-list__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 4px;
+  width: 170px;
+  height: 90px;
+  color: $logo-border;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.clients-list__icon {
+  fill: currentColor;
+}

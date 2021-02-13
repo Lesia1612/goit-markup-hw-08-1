@@ -1,0 +1,130 @@
+/* Portfolio section */
+
+.portfolio-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-list__item {
+  &:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+
+  &:not(:nth-last-child(-n + 3)) {
+    margin-bottom: 30px;
+  }
+}
+
+.portfolio-list__link {
+  display: block;
+  color: $primary-text-color;
+
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.button-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.button-list__item {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+.product__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+.product__text {
+  color: $secondary-text-color;
+  font-size: 16px;
+  line-height: 1.88;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.product__card-content {
+  background-color: #ffffff;
+
+  /* Установит стили верхней рамки */
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: transparent;
+
+  /* Установит стили правой рамки */
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #eeeeee;
+
+  /* Установит стили нинжней рамки */
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #eeeeee;
+
+  /* Установит стили левой рамки */
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #eeeeee;
+
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.product__image {
+  display: block;
+}
+
+/* Overlay в Портфоліо */
+.product {
+  position: relative;
+  overflow: hidden;
+}
+
+.product__overlay {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: translateY(0);
+  transition: 250ms;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(33, 150, 243, 0.9);
+
+  .portfolio-list__link:hover &,
+  .portfolio-list__link:focus & {
+    transform: translateY(-100%);
+  }
+}
+
+.product__overlay-text {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.56;
+  color: $white-text-color;
+  padding: 63px 24px;
+}

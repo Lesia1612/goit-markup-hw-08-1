@@ -1,0 +1,49 @@
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav {
+  display: flex;
+}
+
+.site-nav__item {
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.site-nav__link {
+  display: block;
+  position: relative;
+
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: $primary-text-color;
+}
+
+.auth-nav {
+  display: flex;
+  margin-left: auto;
+}
+
+.auth-nav__item {
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.auth-nav__link {
+  display: flex;
+  align-items: center;
+
+  color: $secondary-text-color;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.auth-nav__icon {
+  margin-right: 10px;
+  fill: currentColor;
+}

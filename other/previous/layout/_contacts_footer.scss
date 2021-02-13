@@ -1,0 +1,16 @@
+.contacts-list__address {
+  color: $white-text-color;
+  font-style: normal;
+  line-height: 1.71;
+}
+
+.contacts-list__link {
+  color: $link-footer-text-color;
+  line-height: 24px;
+}
+
+.contacts-list__item {
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
